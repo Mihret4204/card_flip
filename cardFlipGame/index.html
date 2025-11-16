@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory Match</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <h1>Memory Match</h1>
+      <div class="stats">
+        <div class="stat"><span id="moves">0</span><label>Moves</label></div>
+        <div class="stat"><span id="time">00:00</span><label>Time</label></div>
+        <button id="reset" class="btn">Reset</button>
+      </div>
+    </header>
+
+    <main>
+      <div id="board" class="board" aria-label="Memory board" role="grid"></div>
+    </main>
+
+    <div id="overlay" class="overlay hidden" role="dialog" aria-modal="true">
+      <div class="dialog">
+        <h2>Great job!</h2>
+        <p>You matched all the cards.</p>
+        <div class="summary">
+          <div><strong>Moves:</strong> <span id="final-moves">0</span></div>
+          <div><strong>Time:</strong> <span id="final-time">00:00</span></div>
+        </div>
+        <button id="play-again" class="btn primary">Play again</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
